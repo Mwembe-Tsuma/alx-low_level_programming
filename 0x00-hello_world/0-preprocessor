@@ -1,0 +1,2 @@
+#!/bin/nash
+gcc -E $CFILE -o c
