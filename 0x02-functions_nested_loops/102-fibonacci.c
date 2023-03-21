@@ -21,7 +21,7 @@ int main(void)
 		if (sum == 49)
 			printf("\n");
 		else
-			printf(",");
+			printf(", ");
 	}
 	return (0);
 }
