@@ -1,39 +1,50 @@
 #include "main.h"
-
 /**
- * print_times_table- times table, starting with 0.
- * @n: Character to be coputed
+ *print_times_table - Prints a multiplication table up to param
+ *@n: The number to be treated
+ *Return: Number matrix
  */
 
 void print_times_table(int n)
 {
-	int i, j, k;
+	int x, y, z;
 
-	for (i = 0;  i  < 10; i++)
+	if (n >= 0 && n <= 14)
 	{
-		for (j = 0; j < 10; j++)
+		for (x = 0; x <= n; x++)
 		{
-			k = i * j;
-
-			if (j == 0)
+			for (y = 0; y <= n; y++)
 			{
-				_putchar(k + '0');
+				z = x * y;
+				if (z > 99)
+				{
+					_putchar(',');
+					_putchar(32);
+					_putchar((z / 100) + '0');
+					_putchar(((z / 10) % 10) + '0');
+					_putchar((z % 10) + '0');
+				}
+				else if (z > 9)
+				{
+					_putchar(',');
+					_putchar(32);
+					_putchar(32);
+					_putchar(((z / 10) % 10) + '0');
+					_putchar((z % 10) + '0');
+				}
+				else
+				{
+					if (y != 0)
+					{
+						_putchar(',');
+						_putchar(32);
+						_putchar(32);
+						_putchar(32);
+					}
+					_putchar(z + '0');
+				}
 			}
-			else if (k < 10 && j != 0)
-			{
-				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
-				_putchar(k + '0');
-			}
-			else if (k >= 10)
-			{
-				_putchar(',');
-				_putchar(' ');
-				_putchar(k / 10 + '0');
-				_putchar(k % 10 + '0');
-			}
+			_putchar('\n');
 		}
-		_putchar('\n');
 	}
 }
