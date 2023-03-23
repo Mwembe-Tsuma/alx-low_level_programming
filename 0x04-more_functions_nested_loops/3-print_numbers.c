@@ -1,15 +1,15 @@
 #include "main.h"
 /**
- * print_numbers- Prints a lowercase alphabet
+ * print_numbers- Print numbers from 0 to 9
  *
- * Return: 0 success
+ * Return: Numbers from 0 to 0
  */
 
 void print_numbers(void)
 {
 	int i;
 
-	for (i = 0; i < 10; i++)
+	for (i = 0; i <= 9; i++)
 	{
 		_putchar(i + '0');
 	}
