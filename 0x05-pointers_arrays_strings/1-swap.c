@@ -4,8 +4,9 @@
  *@a: Firts integer
  *@b: Second integer
  *
- * Return: 0 success
+ * Return: Always 0 success
  */
+
 
 void swap_int(int *a, int *b)
 {
