@@ -1,5 +1,6 @@
 #include "main.h"
 
+
 /**
  *swap_int- Swap integers
  *@a: Firts integer
@@ -14,4 +15,5 @@ void swap_int(int *a, int *b)
 
 	*a = *b;
 	*b = n;
+
 }
