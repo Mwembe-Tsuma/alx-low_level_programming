@@ -21,6 +21,7 @@ char *leet(char *n)
 				*s = s2[i] + '0';
 			}
 		}
+		s++;
 	}
 	return (r);
 }
