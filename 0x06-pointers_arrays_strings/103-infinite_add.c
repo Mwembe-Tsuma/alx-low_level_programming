@@ -25,7 +25,6 @@ void rev_string(char *n)
 	}
 }
 
-
 /**
  *infinite_add - add two  numbers
  *@n1: string number to add to n2
