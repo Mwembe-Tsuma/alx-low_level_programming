@@ -3,7 +3,7 @@
 /**
  *_strspn- a function that gets the length of a prefix substring
  *@s: String to be checked
- *accept: the input bytes
+ *@accept: the input character
  *
  * Return: Number of bytes in initial segment s
  */
