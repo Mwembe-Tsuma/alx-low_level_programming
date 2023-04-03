@@ -11,7 +11,9 @@
 
 void print_diagsums(int *a, int size)
 {
-	int m, n, p;
+	int m = 0; 
+	int n = 0; 
+	int p;
 
 	for (p = 0; p < size; p++)
 	{
@@ -19,7 +21,7 @@ void print_diagsums(int *a, int size)
 	}
 	for (p = size - 1; p >= 0; p--)
 	{
-		n = n + a[p * size + (size - p - 1)];
+		n += a[p * size + (size - p - 1)];
 	}
 	printf("%d, %d\n", m, n);
 }
