@@ -6,7 +6,7 @@ int string_len(char *s);
  * is_palindrome- A function that checks if a string is palindrome
  * @s: The string to check
  *
- * Return 1 if palindrome or 0 if not
+ * Return: 1 if palindrome or 0 if not
  */
 
 int is_palindrome(char *s)
