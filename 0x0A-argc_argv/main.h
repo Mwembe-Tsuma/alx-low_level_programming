@@ -3,5 +3,6 @@
 
 
 int _putchar();
+int _atoi(char *s);
 
 #endif /*MAIN_H*/
