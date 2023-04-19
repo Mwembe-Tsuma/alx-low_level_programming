@@ -3,41 +3,41 @@
 #include <stdlib.h>
 
 /**
-  *op_add- Add two integers
-  *@a: 1st integer
-  *@b: 2nd integer
+  *op_add- Add two numbers
+  *@a: first number
+  *@b: second number
   *
   *Return: Sum
   */
 
 int op_add(int a, int b)
 {
-	int sum;
+	int add;
 
-	sum = a + b;
-	return (sum);
+	add = a + b;
+	return (add);
 }
 
 /**
-  *op_sub- subtract two integers
-  *@a: 1st integer
-  *@b: 2nd integer
+  *op_sub- subtract two numbers
+  *@a: first number
+  *@b: second number
   *
   *Return: Results
   */
 
 int op_sub(int a, int b)
 {
-	int res;
+	int sub;
 
-	res = a - b;
-	return (res);
+	sub = a - b;
+	return (sub);
 }
 
 /**
-  *op_mul- Multiply two integers
-  *@a: 1st integer
-  *@b: 2nd integer
+  *op_mul- Multiply two numbers
+  *@a: first number
+  *@b: second number
   *
   *Return: Results
   */
@@ -51,9 +51,9 @@ int op_mul(int a, int b)
 }
 
 /**
-  *op_div- Divides two integers
-  *@a: 1st integer
-  *@b: 2nd integer
+  *op_div- Divides two numbers
+  *@a: 1st number
+  *@b: 2nd number
   *
   *Return: Results
   */
@@ -70,10 +70,10 @@ int op_div(int a, int b)
 
 /**
   *op_mod- Modular
-  *@a: 1st integer
-  *@b: 2nd integer
+  *@a: 1st number
+  *@b: 2nd number
   *
-  *Return: mod
+  *Return: Modular
   */
 
 int op_mod(int a, int b)
