@@ -14,7 +14,7 @@ void print_binary(unsigned long int n)
 	int count = 0;
 	unsigned long int curr;
 
-	for (bit = 63; b >= 0; bi--)
+	for (bit = 63; bit >= 0; bit--)
 	{
 		curr = n >> bit;
 
@@ -26,6 +26,6 @@ void print_binary(unsigned long int n)
 		else if (count)
 			_putchar('0');
 	}
-	if (count == NULL)
+	if (count == 0)
 		_putchar('0');
 }
