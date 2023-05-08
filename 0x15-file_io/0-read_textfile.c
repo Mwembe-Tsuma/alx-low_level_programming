@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
   *read_textfile - Read from a file and print to stdout
@@ -14,40 +13,23 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	char *buffer;
 	ssize_t read_bytes;
 	ssize_t write_bytes;
-
+	ssize_t fp;
 	if (filename == NULL)
 	{
 		return (0);
 	}
-	FILE *fp = fopen(filename, "r");
+	fp = open(filename, O_RDONLY);
 
-	if (fp == NULL)
+	if (fp == -1)
 	{
 		return (0);
 	}
-	buffer = (char *) malloc(sizeof(char) * (letters + 1));
 
-	if (buffer == NULL)
-	{
-		fclose(fp);
-		return (0);
-	}
-	read_bytes = fread(fp, buffer sizeof(char), letters);
-	if (read_bytes == -1)
-	{
-		fclose(fp);
-		free(buffer);
-		return (0);
-	}
+	buffer = malloc(sizeof(char) * letters);
+	read_bytes = read(fp, buffer, letters);
 	write_bytes = write(STDOUT_FILENO, buffer, read_bytes);
-	if (write_bytes == -1 || write_bytes != read_bytes)
-	{
-		fclose(fp);
-		free(buffer);
-		return (0);
-	}
 
 	free(buffer);
-	fclose(fp);
+	close(fp);
 	return (write_bytes);
 }
