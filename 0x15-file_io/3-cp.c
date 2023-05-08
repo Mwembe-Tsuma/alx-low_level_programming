@@ -15,7 +15,7 @@ char *create_buff(char *file)
 {
 	char *buff;
 
-	buff = malloc(1024 * sizeof(char));
+	buff = malloc(sizeof(char) * 1024);
 
 	if (buff == NULL)
 	{
