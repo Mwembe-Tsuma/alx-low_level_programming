@@ -19,7 +19,7 @@ char *create_buff(char *file)
 
 	if (buff == NULL)
 	{
-		dprintf(STDERR_FILENO, "Error: Cannot write to %s\n", file);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file);
 		exit(99);
 	}
 	return (buff);
@@ -27,20 +27,20 @@ char *create_buff(char *file)
 
 /**
   *close_- Close filr desc
-  *@fp: Descriptor
+  *@fd: Descriptor
   *
   *Return: Nothing
   */
 
-void close_(int fp)
+void close_(int fd)
 {
 	int i;
 
-	i = close(fp);
+	i = close(fd);
 
 	if (i == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Caanot close fp %d\n", fp);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 }
