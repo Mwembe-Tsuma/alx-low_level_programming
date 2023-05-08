@@ -13,14 +13,15 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	char *buffer;
 	ssize_t read_bytes;
 	ssize_t write_bytes;
+	ssize_t fp;
 
 	if (filename == NULL)
 	{
 		return (0);
 	}
-	FILE *fp = open(filename, O_RDONLY);
+	fp = open(filename, O_RDONLY);
 
-	if (fp == NULL)
+	if (fp == -1)
 	{
 		return (0);
 	}
