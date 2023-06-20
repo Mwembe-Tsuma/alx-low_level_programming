@@ -1,3 +1,3 @@
 #!/bin/bash
-wget -q --output-document=$PWD/101-make_me_win.so https://github.com/Mwembe-Tsuma/alx-low_level_programming/tree/master/0x18-dynamic_libraries/101-make_me_win.so
-export LD_PRELOAD=$PWD/101-make_me_win.so
+wget -0 /$PWD/101-make_me_win.so https://github.com/Mwembe-Tsuma/alx-low_level_programming/raw/master/0x18-dynamic_libraries/101-make_me_win.so
+export LD_PRELOAD=/$PWD/101-make_me_win.so
