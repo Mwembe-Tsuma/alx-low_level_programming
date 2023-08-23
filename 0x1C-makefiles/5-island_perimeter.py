@@ -17,21 +17,18 @@ def island_perimeter(grid):
     cols = len(grid[0]) - 1
     per = 0
 
-    for row in range(rows):
-        for col in range(cols):
-            if grid[row][col] == 1:
-                per += 4
+    for row, i in enumerate(grid):
+        for col, j in enumerate(i):
+            if j == 1:
+                if row == 0 or grid[row - 1][col] != 1:
+                    per += 1
 
-                if row > 0 and grid[row - 1][col] == 1:
-                    per -= 1
+                if col == 0 or grid[row][col - 1] != 1:
+                    per += 1
 
-                if row > 0 and grid[row][col - 1] == 1:
-                    per -= 1
+                if row == rows or grid[row + 1][col] != 1:
+                    per += 1
 
-                if row < rows - 1 and grid[row + 1][col] == 1:
-                    per -= 1
-
-                if col < cols - 1 and grid[row][col + 1] == 1:
-                    per -= 1
-
+                if col == cols or grid[row][col + 1] != 1:
+                    per += 1
     return per
