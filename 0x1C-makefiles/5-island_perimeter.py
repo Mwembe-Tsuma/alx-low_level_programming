@@ -1,8 +1,10 @@
 #!/usr/bin/python3
+"""5-island_perimeter.py"""
 
 
 def island_perimeter(grid):
-    """Returns the perimeter of the island described in grid
+    """
+    Returns the perimeter of the island described in grid
 
     Args:
         grid: List of integers
