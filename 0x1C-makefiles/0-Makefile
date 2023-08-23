@@ -1,0 +1,15 @@
+# Compiler
+CC = gcc
+
+#Sources
+SOURCES = main.c school.c
+
+OBJECTS = $(SOURCES:.c=.o)
+TARGET = school
+all: $(TARGET)
+
+$(TARGET): $(OBJECTS)
+	$(CC) -o $@ $(OBJECTS)
+
+clean:
+	rm -f $(OBJECTS) $(TARGET)
