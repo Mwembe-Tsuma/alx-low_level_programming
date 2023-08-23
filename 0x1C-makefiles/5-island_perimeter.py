@@ -13,8 +13,8 @@ def island_perimeter(grid):
         Perimeter of the island
     """
 
-    rows = len(grid)
-    cols = len(grid[0])
+    rows = len(grid) - 1
+    cols = len(grid[0]) - 1
     per = 0
 
     for row in range(rows):
