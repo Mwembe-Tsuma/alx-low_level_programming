@@ -1,0 +1,15 @@
+# Compiler
+CC = gcc
+
+#Sources
+SRC = main.c school.c
+
+OBJ = $(SRC:.c=.o)
+NAME = school
+all: $(TARGET)
+
+$(NAME): $(OBJ)
+	$(CC) -o $@ $(OBJ)
+
+clean:
+	rm -f $(OBJ) $(NAME)
