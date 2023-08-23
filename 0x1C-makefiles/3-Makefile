@@ -18,7 +18,7 @@ $(NAME): $(OBJ)
 	$(CC) -o $@ $(OBJ)
 
 clean:
-	rm -f $(OBJ) $(NAME)
+	$(RM) $(OBJ) $(NAME) *~
 
 oclean:
 	$(RM) $(OBJ)
@@ -26,4 +26,4 @@ oclean:
 fclean: clean
 	$(RM) $(NAME)
 
-re: fclean all
+re: oclean all
