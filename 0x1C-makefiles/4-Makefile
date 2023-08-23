@@ -1,0 +1,32 @@
+#Rules
+.PHONY: all clean oclean fclean re
+
+#Program to remove
+RM = rm -f 
+
+# Compiler
+CC = gcc
+
+#Flags
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+#Sources
+SRC = main.c school.c
+
+OBJ = $(SRC:.c=.o)
+NAME = school
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) $(CFLAGS) -o $@ $(OBJ)
+
+clean:
+	$(RM) $(OBJ) $(NAME) *~
+
+oclean:
+	$(RM) $(OBJ)
+
+fclean: clean
+	$(RM) $(NAME)
+
+re: oclean all
